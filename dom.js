@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
    // Select email input
 const email = document.getElementById("email");
 
-email.classList.add("highlight");
+email.classList.toggle("active");
 
 
 email.setAttribute("data-test", "email-field");
