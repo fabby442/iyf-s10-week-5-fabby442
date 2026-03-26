@@ -21,8 +21,6 @@ const email = document.getElementById("email");
 
 email.classList.add("highlight");
 
-email.style.backgroundColor = "lightblue";
-email.style.padding = "10px";
 
 email.setAttribute("data-test", "email-field");
 
