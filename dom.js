@@ -47,10 +47,11 @@ email.removeAttribute("data-test");
 document.addEventListener("DOMContentLoaded", function () {
    // your code here
 });
-const input = document.getElementById("email");
+const btn = document.querySelector("button");
 
-input.addEventListener("focus", () => {
-  console.log("Input focused");
+btn.addEventListener("click", function (event) {
+  console.log("Event:", event);
+  console.log("Target:", event.target);
 });
 
 input.addEventListener("blur", () => {
