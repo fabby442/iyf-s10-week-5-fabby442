@@ -36,7 +36,10 @@ email.removeAttribute("data-test");
   // Children of form
   const form = document.getElementById("contact-form");
   console.log("Children:", form.children);
-
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("Form submission prevented");
+});
   // First child
   console.log("First child:", form.firstElementChild);
 
@@ -47,11 +50,10 @@ email.removeAttribute("data-test");
 document.addEventListener("DOMContentLoaded", function () {
    // your code here
 });
-const btn = document.querySelector("button");
+const input = document.getElementById("email");
 
-btn.addEventListener("click", function (event) {
-  console.log("Event:", event);
-  console.log("Target:", event.target);
+input.addEventListener("focus", () => {
+  console.log("Input focused");
 });
 
 input.addEventListener("blur", () => {
