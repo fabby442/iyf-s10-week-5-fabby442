@@ -56,3 +56,8 @@ document.body.appendChild(newParagraph);
 setTimeout(() => {
   newParagraph.remove();
 }, 3000);
+for (let i = 1; i <= 3; i++) {
+  const p = document.createElement("p");
+  p.textContent = "Paragraph " + i;
+  document.body.appendChild(p);
+}
