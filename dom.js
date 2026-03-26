@@ -16,6 +16,20 @@ const form = document.getElementById("contact-form");
 console.log("Form:", form);
 
 document.addEventListener("DOMContentLoaded", function () {
+   // Select email input
+const email = document.getElementById("email");
+
+// Get attribute
+console.log("Type:", email.getAttribute("type"));
+
+// Set attribute
+email.setAttribute("placeholder", "Enter your email here");
+
+// Add new attribute
+email.setAttribute("data-test", "my-email");
+
+// Remove attribute
+email.removeAttribute("data-test"); 
 
   const email = document.getElementById("email");
 
