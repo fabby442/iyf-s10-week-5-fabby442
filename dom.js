@@ -47,6 +47,15 @@ email.removeAttribute("data-test");
 document.addEventListener("DOMContentLoaded", function () {
    // your code here
 });
+const input = document.getElementById("email");
+
+input.addEventListener("focus", () => {
+  console.log("Input focused");
+});
+
+input.addEventListener("blur", () => {
+  console.log("Input lost focus");
+});
 const newParagraph = document.createElement("p");
 newParagraph.textContent = "This is a new paragraph";
 
