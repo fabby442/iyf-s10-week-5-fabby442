@@ -44,3 +44,8 @@ email.removeAttribute("data-test");
   console.log("Last child:", form.lastElementChild);
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+   // your code here
+});
+const newParagraph = document.createElement("p");
+console.log(newParagraph);
