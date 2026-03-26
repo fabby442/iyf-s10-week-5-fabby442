@@ -19,19 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
    // Select email input
 const email = document.getElementById("email");
 
-// Get attribute
-console.log("Type:", email.getAttribute("type"));
+email.setAttribute("data-test", "email-field");
 
-// Set attribute
-email.setAttribute("placeholder", "Enter your email here");
-
-// Add new attribute
-email.setAttribute("data-test", "my-email");
-
-// Remove attribute
-email.removeAttribute("data-test"); 
-
-  const email = document.getElementById("email");
+// Remove it
+email.removeAttribute("data-test");
 
   // Parent
   console.log("Parent:", email.parentElement);
