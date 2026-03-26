@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
    // Select email input
 const email = document.getElementById("email");
 
+email.style.backgroundColor = "lightblue";
+email.style.padding = "10px";
+
 email.setAttribute("data-test", "email-field");
 
 // Remove it
