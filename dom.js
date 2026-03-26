@@ -93,8 +93,9 @@ clone.textContent = "Cloned paragraph";
 document.body.appendChild(clone);
 
 document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector(".btn");
-
+ 
+  const btn = document.querySelector("button");
+ console.log("BTN:", btn);
   btn.addEventListener("click", () => {
     console.log("clicked");
   });
