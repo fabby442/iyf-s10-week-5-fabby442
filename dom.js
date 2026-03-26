@@ -91,3 +91,11 @@ const clone = original.cloneNode(true);
 clone.textContent = "Cloned paragraph";
 
 document.body.appendChild(clone);
+
+const list = document.getElementById("todo-list");
+
+list.addEventListener("click", function (e) {
+  if (e.target.tagName === "LI") {
+    console.log("List item clicked:", e.target.textContent);
+  }
+});
