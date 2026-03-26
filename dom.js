@@ -15,13 +15,24 @@ console.log("Contents:", contents);
 const form = document.getElementById("contact-form");
 console.log("Form:", form);
 
+document.addEventListener("DOMContentLoaded", function () {
 
-// Select email input
-const email = document.querySelector('input[type="email"]');
-console.log(email);
+  const email = document.getElementById("email");
 
-// ===== DOM TRAVERSAL PRACTICE =====
-const list = document.getElementById("todo-list");
+  // Parent
+  console.log("Parent:", email.parentElement);
 
-const parent = list.parentElement;
-console.log("Parent:", parent)
+  // Grandparent
+  console.log("Grandparent:", email.parentElement.parentElement);
+
+  // Children of form
+  const form = document.getElementById("contact-form");
+  console.log("Children:", form.children);
+
+  // First child
+  console.log("First child:", form.firstElementChild);
+
+  // Last child
+  console.log("Last child:", form.lastElementChild);
+
+});
