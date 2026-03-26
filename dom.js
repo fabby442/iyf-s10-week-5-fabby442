@@ -48,4 +48,4 @@ document.addEventListener("DOMContentLoaded", function () {
    // your code here
 });
 const newParagraph = document.createElement("p");
-console.log(newParagraph);
+newParagraph.textContent = "This is a new paragraph";
