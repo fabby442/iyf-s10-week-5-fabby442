@@ -15,9 +15,6 @@ console.log("Contents:", contents);
 const form = document.getElementById("contact-form");
 console.log("Form:", form);
 
-// 4. Select email input
-const email = document.querySelector('input[type="email"]');
-console.log("Email:", email);
 // Select email input
 const email = document.querySelector('input[type="email"]');
 console.log(email);
