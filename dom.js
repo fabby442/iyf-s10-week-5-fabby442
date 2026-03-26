@@ -66,6 +66,7 @@ original.textContent = "Original paragraph";
 
 document.body.appendChild(original);
 
-// Clone it
 const clone = original.cloneNode(true);
+clone.textContent = "Cloned paragraph";
+
 document.body.appendChild(clone);
