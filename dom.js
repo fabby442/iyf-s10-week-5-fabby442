@@ -57,8 +57,9 @@ parent.addEventListener("click", () => {
   console.log("Parent clicked");
 });
 
-input.addEventListener("click", () => {
-  console.log("Input clicked");
+input.addEventListener("click", function (e) {
+  e.stopPropagation();
+  console.log("Only input clicked");
 });
 input.addEventListener("focus", () => {
   console.log("Input focused");
