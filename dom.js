@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
    // Select email input
 const email = document.getElementById("email");
 
+email.classList.add("highlight");
+
 email.style.backgroundColor = "lightblue";
 email.style.padding = "10px";
 
