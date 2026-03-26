@@ -15,6 +15,13 @@ console.log("Contents:", contents);
 const form = document.getElementById("contact-form");
 console.log("Form:", form);
 
+
 // Select email input
 const email = document.querySelector('input[type="email"]');
 console.log(email);
+
+// ===== DOM TRAVERSAL PRACTICE =====
+const list = document.getElementById("todo-list");
+
+const parent = list.parentElement;
+console.log("Parent:", parent)
