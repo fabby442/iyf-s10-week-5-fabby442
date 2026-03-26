@@ -61,3 +61,11 @@ for (let i = 1; i <= 3; i++) {
   p.textContent = "Paragraph " + i;
   document.body.appendChild(p);
 }
+const original = document.createElement("p");
+original.textContent = "Original paragraph";
+
+document.body.appendChild(original);
+
+// Clone it
+const clone = original.cloneNode(true);
+document.body.appendChild(clone);
