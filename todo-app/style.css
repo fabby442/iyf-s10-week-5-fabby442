@@ -1,0 +1,91 @@
+/* GENERAL */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* CONTAINER */
+.container {
+  background: white;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+}
+
+/* FORM */
+form {
+  display: flex;
+  gap: 10px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* LIST */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* COMPLETED TASK */
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* DELETE BUTTON */
+#todo-list button {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* FILTER BUTTONS */
+.filters {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  background: #eee;
+  border: none;
+  padding: 5px 10px;
+}
+
+.filter.active {
+  background: black;
+  color: white;
+}
+
+/* STATS */
+.stats {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
