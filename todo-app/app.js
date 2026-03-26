@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // SELECT ELEMENTS
     const form = document.getElementById("todo-form");
     const input = document.getElementById("todo-input");
     const list = document.getElementById("todo-list");
@@ -17,14 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const li = document.createElement("li");
 
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+
         const span = document.createElement("span");
         span.textContent = text;
 
         const btn = document.createElement("button");
         btn.textContent = "X";
 
+        li.appendChild(checkbox);
         li.appendChild(span);
         li.appendChild(btn);
+
         list.appendChild(li);
 
         input.value = "";
@@ -32,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCount();
     });
 
-    // CLICK EVENTS (TOGGLE + DELETE)
+    // CLICK EVENTS
     list.addEventListener("click", function (e) {
 
         // DELETE
@@ -40,9 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
             e.target.parentElement.remove();
         }
 
-        // TOGGLE COMPLETE
-        if (e.target.tagName === "SPAN") {
-            e.target.parentElement.classList.toggle("completed");
+        // COMPLETE
+        if (e.target.type === "checkbox") {
+            const li = e.target.parentElement;
+            li.classList.toggle("completed");
         }
 
         updateCount();
@@ -56,19 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
             for (let task of tasks) {
                 if (type === "all") {
-                    task.style.display = "block";
+                    task.style.display = "flex";
                 } 
                 else if (type === "active") {
-                    task.style.display = task.classList.contains("completed") ? "none" : "block";
+                    task.style.display = task.classList.contains("completed") ? "none" : "flex";
                 } 
                 else {
-                    task.style.display = task.classList.contains("completed") ? "block" : "none";
+                    task.style.display = task.classList.contains("completed") ? "flex" : "none";
                 }
             }
         });
     });
 
-    // COUNT ITEMS LEFT
+    // COUNT ITEMS
     function updateCount() {
         const tasks = list.children;
         let count = 0;

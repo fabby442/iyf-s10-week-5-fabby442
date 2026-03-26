@@ -1,7 +1,7 @@
-/* GENERAL */
+/* BACKGROUND */
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -10,10 +10,10 @@ body {
 /* CONTAINER */
 .container {
   background: white;
-  padding: 20px;
-  width: 350px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* TITLE */
@@ -25,11 +25,14 @@ h1 {
 form {
   display: flex;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 #todo-input {
   flex: 1;
-  padding: 8px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
 }
 
 button {
@@ -41,17 +44,31 @@ button {
 #todo-list {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
 }
 
 #todo-list li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
 }
 
-/* COMPLETED TASK */
+/* CHECKBOX */
+#todo-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* TEXT */
+#todo-list span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+/* COMPLETED */
 .completed span {
   text-decoration: line-through;
   color: gray;
@@ -59,33 +76,28 @@ button {
 
 /* DELETE BUTTON */
 #todo-list button {
-  background: red;
+  background: crimson;
   color: white;
   border: none;
+  padding: 5px 8px;
   border-radius: 5px;
 }
 
-/* FILTER BUTTONS */
+/* HOVER */
+#todo-list li:hover {
+  background: #f0f8ff;
+}
+
+/* FILTERS */
 .filters {
-  margin-top: 15px;
   display: flex;
   justify-content: space-between;
-}
-
-.filter {
-  background: #eee;
-  border: none;
-  padding: 5px 10px;
-}
-
-.filter.active {
-  background: black;
-  color: white;
+  margin-top: 10px;
 }
 
 /* STATS */
 .stats {
-  margin-top: 15px;
   display: flex;
   justify-content: space-between;
+  margin-top: 15px;
 }
