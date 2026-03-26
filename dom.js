@@ -52,6 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 const input = document.getElementById("email");
 
+
+parent.addEventListener("click", () => {
+  console.log("Parent clicked");
+});
+
+input.addEventListener("click", () => {
+  console.log("Input clicked");
+});
 input.addEventListener("focus", () => {
   console.log("Input focused");
 });
