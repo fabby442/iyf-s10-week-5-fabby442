@@ -18,6 +18,6 @@ console.log("Form:", form);
 // 4. Select email input
 const email = document.querySelector('input[type="email"]');
 console.log("Email:", email);
-// Select content using getElementsByClassName
-const contents = document.getElementsByClassName("content");
-console.log(cont
+// Select email input
+const email = document.querySelector('input[type="email"]');
+console.log(email);
