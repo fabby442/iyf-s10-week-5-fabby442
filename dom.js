@@ -49,3 +49,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 const newParagraph = document.createElement("p");
 newParagraph.textContent = "This is a new paragraph";
+
+document.body.appendChild(newParagraph);
+
+// Remove after 3 seconds
+setTimeout(() => {
+  newParagraph.remove();
+}, 3000);
